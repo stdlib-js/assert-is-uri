@@ -1,0 +1,38 @@
+{
+  "name": "@stdlib/assert-is-uri",
+  "version": "0.0.0",
+  "description": "Test if a value is a URI.",
+  "license": "Apache-2.0",
+  "main": "./bundle.js",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/assert-is-uri.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdassert",
+    "assertion",
+    "assert",
+    "utilities",
+    "utility",
+    "utils",
+    "util",
+    "url",
+    "uri",
+    "is",
+    "isurl",
+    "isuri",
+    "isvalid",
+    "check",
+    "valid",
+    "validate"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
