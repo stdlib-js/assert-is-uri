@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import isURI from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-uri@deno/mod.js';
+import isURI from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-uri@v0.1.1-deno/mod.js';
 ```
 
 #### isURI( value )
@@ -94,7 +94,7 @@ bool = isURI( true );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import isURI from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-uri@deno/mod.js';
+import isURI from 'https://cdn.jsdelivr.net/gh/stdlib-js/assert-is-uri@v0.1.1-deno/mod.js';
 
 /* Valid */
 
