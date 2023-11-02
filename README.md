@@ -35,171 +35,19 @@ limitations under the License.
 
 > Test if a value is a [URI][uri].
 
-<section class="installation">
 
-## Installation
 
-```bash
-npm install @stdlib/assert-is-uri
-```
 
-Alternatively,
 
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
--   To use as a general utility for the command line, install the corresponding [CLI package][cli-section] globally.
 
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
 
-</section>
 
-<section class="usage">
 
-## Usage
 
-```javascript
-var isURI = require( '@stdlib/assert-is-uri' );
-```
-
-#### isURI( value )
-
-Tests if a `value` is a [URI][uri].
-
-```javascript
-var bool = isURI( 'https://google.com' );
-// returns true
-
-bool = isURI( 'ftp://ftp.is.co.za/rfc/rfc1808.txt' );
-// returns true
-
-bool = isURI( '' );
-// returns false
-
-bool = isURI( 'foo' );
-// returns false
-
-bool = isURI( null );
-// returns false
-
-bool = isURI( NaN );
-// returns false
-
-bool = isURI( true );
-// returns false
-```
-
-</section>
-
-<!-- /.usage -->
-
-<section class="notes">
-
-## Notes
-
--   For more information regarding the URI scheme, see [RFC 3986][rfc-3986] and [Wikipedia][uri].
--   On the distinction between URI, URL, and URN, see [The Difference Between URLs and URIs][difference-url-uri].
-
-</section>
-
-<!-- /.notes -->
-
-<section class="examples">
-
-## Examples
-
-<!-- eslint no-undef: "error" -->
-
-```javascript
-var isURI = require( '@stdlib/assert-is-uri' );
-
-/* Valid */
-
-var bool = isURI( 'http://google.com' );
-// returns true
-
-bool = isURI( 'http://localhost/' );
-// returns true
-
-bool = isURI( 'http://example.w3.org/path%20with%20spaces.html' );
-// returns true
-
-bool = isURI( 'http://example.w3.org/%20' );
-// returns true
-
-bool = isURI( 'ftp://ftp.is.co.za/rfc/rfc1808.txt' );
-// returns true
-
-bool = isURI( 'ftp://ftp.is.co.za/../../../rfc/rfc1808.txt' );
-// returns true
-
-bool = isURI( 'http://www.ietf.org/rfc/rfc2396.txt' );
-// returns true
-
-bool = isURI( 'ldap://[2001:db8::7]/c=GB?objectClass?one' );
-// returns true
-
-bool = isURI( 'mailto:John.Doe@example.com' );
-// returns true
-
-bool = isURI( 'news:comp.infosystems.www.servers.unix' );
-// returns true
-
-bool = isURI( 'tel:+1-816-555-1212' );
-// returns true
-
-bool = isURI( 'telnet://192.0.2.16:80/' );
-// returns true
-
-bool = isURI( 'urn:oasis:names:specification:docbook:dtd:xml:4.1.2' );
-// returns true
-
-/* Invalid */
-
-// No scheme:
-bool = isURI( '' );
-// returns false
-
-// No scheme:
-bool = isURI( 'foo' );
-// returns false
-
-// No scheme:
-bool = isURI( 'foo@bar' );
-// returns false
-
-// No scheme:
-bool = isURI( '://foo/' );
-// returns false
-
-// Illegal characters:
-bool = isURI( 'http://<foo>' );
-// returns false
-
-// Invalid path:
-bool = isURI( 'http:////foo.html' );
-// returns false
-
-// Incomplete hex escapes...
-bool = isURI( 'http://example.w3.org/%a' );
-// returns false
-
-bool = isURI( 'http://example.w3.org/%a/foo' );
-// returns false
-
-bool = isURI( 'http://example.w3.org/%at' );
-// returns false
-```
-
-</section>
-
-<!-- /.examples -->
-
-* * *
 
 <section class="cli">
 
-## CLI
+
 
 <section class="installation">
 
@@ -217,7 +65,7 @@ npm install -g @stdlib/assert-is-uri-cli
 
 <section class="usage">
 
-### Usage
+## Usage
 
 ```text
 Usage: is-uri [options] [<uri>]
@@ -237,7 +85,7 @@ Options:
 
 <section class="notes">
 
-### Notes
+## Notes
 
 -   If the split separator is a [regular expression][mdn-regexp], ensure that the `split` option is either properly escaped or enclosed in quotes.
 
@@ -256,7 +104,7 @@ Options:
 
 <section class="examples">
 
-### Examples
+## Examples
 
 ```bash
 $ is-uri http://google.com
@@ -290,6 +138,11 @@ true
 
 <section class="related">
 
+## See Also
+
+-   <span class="package-name">[`@stdlib/assert-is-uri`][@stdlib/assert-is-uri]</span><span class="delimiter">: </span><span class="description">test if a value is a URI.</span>
+
+
 </section>
 
 <!-- /.related -->
@@ -307,7 +160,7 @@ This package is part of [stdlib][stdlib], a standard library for JavaScript and 
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
-#### Community
+### Community
 
 [![Chat][chat-image]][chat-url]
 
@@ -330,8 +183,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <section class="links">
 
-[npm-image]: http://img.shields.io/npm/v/@stdlib/assert-is-uri.svg
-[npm-url]: https://npmjs.org/package/@stdlib/assert-is-uri
+[npm-image]: http://img.shields.io/npm/v/@stdlib/assert-is-uri-cli.svg
+[npm-url]: https://npmjs.org/package/@stdlib/assert-is-uri-cli
 
 [test-image]: https://github.com/stdlib-js/assert-is-uri/actions/workflows/test.yml/badge.svg?branch=main
 [test-url]: https://github.com/stdlib-js/assert-is-uri/actions/workflows/test.yml?query=branch:main
